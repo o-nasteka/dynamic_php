@@ -1,0 +1,7 @@
+php_value error_reporting 2047
+php_value display_errors On
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
