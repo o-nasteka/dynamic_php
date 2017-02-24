@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Тестирование ссылки</title>
+</head>
+<body>
+    <a id="mylink" href="http://site.com">Щелкни</a><br>
+    <a id="mylink2" href="http://site2.com">Щелкни</a><br>
+    <a id="mylink3" href="http://site3.com">Щелкни</a><br>
+    <script>
+        url = $('mylink').href;
+        document.write('URL-адрес — ' + url);
+
+        br();
+        br();
+
+        for (j=0 ; j < document.links.length ; ++j)
+            document.write(document.links[j].href + '<br>')
+
+        br();
+
+        document.write(history.length);
+
+//        document.location.href = 'http://google.com';
+
+        function br()
+        {
+            return document.write('<br>');
+        }
+
+        function $(id)
+        {
+            return document.getElementById(id);
+        }
+
+    </script>
+
+</body>
+</html>
